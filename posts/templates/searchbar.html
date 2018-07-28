@@ -1,0 +1,41 @@
+
+<form action="/search"  method="GET" class=" form-inline"> 
+        <fieldset>
+            <div class="row">
+                <div class="col-xs-12">
+                    <input type="text" name="name" class="form-control" placeholder="Key word">
+                </div>
+            </div>
+        </fieldset>
+
+        <fieldset>
+            <div class="row">
+                <div class="col-xs-6">
+
+                    <select id="lunchBegins" name="city" class="selectpicker" data-live-search="true" data-live-search-style="begins" title="Select Your City">
+                       {% for coun in country %}
+                        <option value="{{coun.nom_fr_fr}}">{{coun.nom_fr_fr}}</option>
+                       {% endfor %}
+                        
+                    </select>
+                </div>
+                <div class="col-xs-6">
+
+                    <select id="basic" name="categorie" class="selectpicker show-tick form-control">
+                        {% for cat in categories %}
+                          <option value="{{cat.id}}">{{cat.name}}</option>
+                        {% endfor %}
+
+                    </select>
+                </div>
+            </div>
+        </fieldset>
+       
+        <fieldset >
+            <div class="row">
+                <div class="col-xs-12">  
+                    <input class="button btn largesearch-btn" value="Search" type="submit">
+                </div>  
+            </div>
+        </fieldset>                                     
+    </form>

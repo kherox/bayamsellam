@@ -1,0 +1,64 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <meta name="author" content="kherox">
+    <meta name="description" content="Achetez et vendez gratuitement partout au Cameroun ! ✓ Produit Neuf ou Occasion ✓ Annonces Pros & Particuliers ✓ Téléphones, Autos, Emploi, etc.">
+    <meta name="robots" content="index, follow">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta property="og:description" content="Achetez et vendez gratuitement partout au Cameroun ! ✓ Produit Neuf ou Occasion ✓ Annonces Pros & Particuliers ✓ Téléphones, Autos, Emploi, etc.">
+    <meta property="og:title" content="DEALS FACILE  Cameroun | Petites annonces Gratuites | Achat et Vente ">
+    <meta property="og:url" content="">
+    {% load static %}
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,700,800' rel='stylesheet' type='text/css'>
+    
+    <link rel="stylesheet" type="text/css" href="{% static 'assets/css/normalize.css' %} ">
+    <link rel="stylesheet" type="text/css" href="{% static 'assets/css/font-awesome.min.css' %} ">
+    <link rel="stylesheet" href="{% static 'assets/css/fontello.css' %} ">
+    <link href="{% static 'assets/fonts/icon-7-stroke/css/pe-icon-7-stroke.css' %} " type="text/css" rel="stylesheet">
+    <link href="{% static 'assets/fonts/icon-7-stroke/css/helper.css' %} " type="text/css"  rel="stylesheet">
+    <link href="{% static 'assets/css/animate.css' %} " rel="stylesheet" type="text/css" media="screen">
+    <link rel="stylesheet" type="text/css" href="{% static 'assets/css/bootstrap-select.min.css' %} "> 
+    <link rel="stylesheet" type="text/css" href="{% static 'bootstrap/css/bootstrap.min.css' %} ">
+    <link rel="stylesheet" type="text/css" href="{% static 'assets/css/icheck.min_all.css' %} ">
+    <link rel="stylesheet" type="text/css" href="{% static 'assets/css/price-range.css' %} ">
+    <link rel="stylesheet" type="text/css" href="{% static 'assets/css/owl.carousel.css' %} ">  
+    <link rel="stylesheet" type="text/css" href="{% static 'assets/css/owl.theme.css' %} ">
+    <link rel="stylesheet" type="text/css" href="{% static 'assets/css/owl.transitions.css' %} ">
+    <link rel="stylesheet" type="text/css" href="{% static 'assets/css/style.css' %} ">
+    <link rel="stylesheet" href="{% static 'assets/css/lightslider.min.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'assets/css/responsive.css' %} ">
+
+
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+
+    <style>
+        .owl-pagination {
+            display: none;
+        }
+    </style>
+
+
+     {% block title %}<title>DEALS FACILE</title>{% endblock %}
+</head>
+<body>
+
+    {% include 'header.html' %}
+
+    {% include 'navbar.html' %}
+
+        {% block content  %}{% endblock %}
+
+
+    {% include 'footer.html' %}
+
+
+
+</body>
+</html>

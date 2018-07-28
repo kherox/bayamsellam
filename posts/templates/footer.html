@@ -1,0 +1,131 @@
+   <!-- Footer area-->
+   <div class="footer-area">
+    
+                <!-- <div class=" footer">
+                    <div class="container">
+                        <div class="row">
+    
+                            <div class="col-md-3 col-sm-6 wow fadeInRight animated">
+                                <div class="single-footer">
+                                    <h4>A propos </h4>
+                                    <div class="footer-title-line"></div>
+    
+                                    <img src="assets/img/footer-logo.png" alt="" class="wow pulse" data-wow-delay="1s">
+                                    <p>Societe de droit camerounais</p>
+                                    <ul class="footer-adress">
+                                        <li><i class="pe-7s-map-marker strong"> </i> 9089 your adress her</li>
+                                        <li><i class="pe-7s-mail strong"> </i> email@yourcompany.com</li>
+                                        <li><i class="pe-7s-call strong"> </i> +1 908 967 5906</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-md-3 col-sm-6 wow fadeInRight animated">
+                                <div class="single-footer">
+                                    <h4>Service</h4>
+                                    <div class="footer-title-line"></div>
+                                    <ul class="footer-menu">
+                                        <li><a href="/">Accueil</a>  </li> 
+                                        <li><a href="{% url 'catalogue' %}">Catalogue</a>  </li> 
+                                        <li><a href="{% url 'contact' %}">Contact</a></li> 
+                                        <li><a href="{% url 'terms' %}">Conditions </a>  </li> 
+                                    </ul>
+                                </div>
+                            </div>
+                            
+                            <div class="col-md-3 col-sm-6 wow fadeInRight animated">
+                                <div class="single-footer">
+                                    <h4>Derniers articles</h4>
+                                    <div class="footer-title-line"></div>
+                                     {% load lastnews %}
+                                     {% default_lastnews %}
+                                </div>
+                            </div>
+                            <div class="col-md-3 col-sm-6 wow fadeInRight animated">
+                                <div class="single-footer news-letter">
+                                    <h4>Infor</h4>
+                                    <div class="footer-title-line"></div>
+                                    <p>
+                                        Bayam Sellam est une plateforme qui permet a tout individus de vendre et d'acheter en toute tranquilité
+                                    </p>
+    
+                                    <form>
+                                        <div class="input-group">
+                                            <input class="form-control" type="text" placeholder="E-mail ... ">
+                                            <span class="input-group-btn">
+                                                <button class="btn btn-primary subscribe" type="button"><i class="pe-7s-paper-plane pe-2x"></i></button>
+                                            </span>
+                                        </div>
+                                    </form> 
+    
+                                    <div class="social pull-right"> 
+                                        <ul>
+                                            <li><a class="wow fadeInUp animated" href="https://twitter.com/bayamsellam"><i class="fa fa-twitter"></i></a></li>
+                                            <li><a class="wow fadeInUp animated" href="https://www.facebook.com/bayamsellam" data-wow-delay="0.2s"><i class="fa fa-facebook"></i></a></li>
+                                            <li><a class="wow fadeInUp animated" href="https://plus.google.com/bayamsellam" data-wow-delay="0.3s"><i class="fa fa-google-plus"></i></a></li>
+                                            <li><a class="wow fadeInUp animated" href="https://instagram.com/bayamsellam" data-wow-delay="0.4s"><i class="fa fa-instagram"></i></a></li>
+                                            <li><a class="wow fadeInUp animated" href="https://instagram.com/bayamsellam" data-wow-delay="0.6s"><i class="fa fa-dribbble"></i></a></li>
+                                        </ul> 
+                                    </div>
+                                </div>
+                            </div>
+    
+                        </div>
+                    </div>
+                </div> -->
+    
+                <div class="footer-copy text-center">
+                    <div class="container">
+                        <div class="row">
+                            <div class="pull-left">
+                                <span> (C) <a href="#">Deals Facile</a> , All rights reserved   </span> 
+                            </div> 
+                            <div class="bottom-menu pull-right"> 
+                                <ul> 
+                                    <li><a class="wow fadeInUp animated" href="/" data-wow-delay="0.2s">Home</a></li>
+                                    <li><a class="wow fadeInUp animated" href="{% url 'catalogue' %}" data-wow-delay="0.3s">Catalogue</a></li>
+                                    <li><a class="wow fadeInUp animated" href="{% url 'contact' %}" data-wow-delay="0.6s">Contact</a></li>
+                                </ul> 
+                            </div>
+                        </div>
+                    </div>
+                </div>
+    
+            </div>
+
+    {% load static %}
+    <script type="text/javascript" src="{% static 'assets/js/modernizr-2.6.2.min.js' %}"></script>
+    
+    <script type="text/javascript" src="{% static 'assets/js/jquery-1.10.2.min.js' %}"></script> 
+    <script type="text/javascript" src="{% static 'bootstrap/js/bootstrap.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'assets/js/bootstrap-select.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'assets/js/bootstrap-hover-dropdown.js' %}"></script>
+    
+    <script type="text/javascript" src="{% static 'assets/js/easypiechart.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'assets/js/jquery.easypiechart.min.js' %}"></script>
+    
+    <script type="text/javascript" src="{% static 'assets/js/owl.carousel.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'assets/js/wow.js' %}"></script>
+    
+    <script type="text/javascript" src="{% static 'assets/js/icheck.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'assets/js/price-range.js' %}"></script>
+    <script type="text/javascript" src="{% static 'assets/js/lightslider.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'assets/js/main.js' %}"></script>  
+      
+
+    <script>
+        $(document).ready(function () {
+
+            $('#image-gallery').lightSlider({
+                gallery: true,
+                item: 1,
+                thumbItem: 9,
+                slideMargin: 0,
+                speed: 500,
+                auto: true,
+                loop: true,
+                onSliderLoad: function () {
+                    $('#image-gallery').removeClass('cS-hidden');
+                }
+            });
+        });
+    </script>

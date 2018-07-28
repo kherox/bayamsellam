@@ -1,0 +1,19 @@
+<ul class="footer-blog">
+    {% load static %}
+    {%  for post in posts  %}
+    <li>
+        <div class="col-md-3 col-sm-4 col-xs-4 blg-thumb p0">
+            <a href="{% url 'detail' post.id post.slug %}">
+                <img src="static/{{post.links}} " alt="{{post.name}}">
+            </a>
+            <span class="blg-date">{{post.created}}</span>
+
+        </div>
+        <div class="col-md-8  col-sm-8 col-xs-8  blg-entry">
+            <h6> <a href="{% url 'detail' post.id post.slug %}">{{ post.categorie }}</a></h6> 
+            <p style="line-height: 17px; padding: 8px 2px;">{{post.name}}</p>
+        </div>
+    </li> 
+{% endfor %}
+
+</ul>

@@ -1,0 +1,201 @@
+{%extends "base.html" %}
+
+{% block content %}
+        <div class="page-head"> 
+            <div class="container">
+                <div class="row">
+                    <div class="page-head-content">
+                        <h1 class="page-title">{{post.name}}</h1>               
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End page header -->
+   {% load static %}
+        <!-- property area -->
+        <div class="content-area single-property" style="background-color: #FCFCFC;">&nbsp;
+            <div class="container">   
+
+                <div class="clearfix padding-top-40" >
+
+                    <div class="col-md-8 single-property-content prp-style-1 ">
+                        <div class="row">
+                            <div class="light-slide-item">            
+                                <div class="clearfix">
+                                    <div class="favorite-and-print">
+                                        <a class="add-to-fav" href="#login-modal" data-toggle="modal">
+                                            <i class="fa fa-star-o"></i>
+                                        </a>
+                                        <a class="printer-icon " href="javascript:window.print()">
+                                            <i class="fa fa-print"></i> 
+                                        </a>
+                                    </div> 
+
+                                    <ul id="image-gallery" class="gallery list-unstyled cS-hidden">
+                                        {% if post.links %}
+                                        <li data-thumb="/static/{{post.links}}"> 
+                                            <img src="/static/{{post.links}}" />
+                                        </li>
+                                        {% endif %}
+
+                                        {% if post.links1 %}
+                                        <li data-thumb="/static/{{post.links1}}"> 
+                                            <img src="/static/{{post.links1}}" />
+                                        </li>
+                                        {% endif %}
+
+                                        {% if post.links2 %}
+                                        <li data-thumb="/static/{{post.links2}}"> 
+                                            <img src="/static/{{post.links2}}" />
+                                        </li>
+                                        {% endif %}
+
+
+                                        {% if post.links3 %}
+                                        <li data-thumb="/static/{{post.links3}}"> 
+                                            <img src="/static/{{post.links3}}" />
+                                        </li>
+                                        {% endif %}
+
+                                        {% if post.links4 %}
+                                        <li data-thumb="/static/{{post.links4}}"> 
+                                            <img src="/static/{{post.links4}}" />
+                                        </li>
+                                        {% endif %}
+                                                                            
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="single-property-wrapper">
+                            <div class="single-property-header">                                          
+                                <h1 class="property-title pull-left">{{post.name}}</h1>
+                                <span class="property-price pull-right">{{post.price}} F</span>
+                            </div>
+
+
+                            <div class="section">
+                                <h4 class="s-property-title">Description</h4>
+                                <div class="s-property-content">
+                                    <p>
+                                        {{ post.content }}
+                                    </p>
+                                </div>
+                            </div>
+                            <!-- End description area  -->
+
+                         
+
+                            
+                            <!-- End features area  -->
+                            {% if post.video %}
+                            <div class="section property-video"> 
+                                <h4 class="s-property-title">Video</h4> 
+                                <div class="video-thumb">
+                                   
+                                    <a class="video-popup" href="{{post.video}}" title="Virtual Tour">
+                                        <img src="/static/assets/img/property-video.jpg" class="img-responsive wp-post-image" alt="Exterior">            
+                                    </a>
+                                </div>
+                            </div>
+                            {% endif %}
+                            <!-- End video area  -->
+                            
+                            
+
+                            <div class="section property-share"> 
+                                <h4 class="s-property-title">Partager</h4> 
+                                <div class="roperty-social">
+                                    <ul> 
+                                        <li><a title="Share this on facebok " href="#"><img src="/static/assets/img/social_big/facebook_grey.png"></a></li> 
+                                        <li><a title="Share this on twitter " href="#"><img src="/static/assets/img/social_big/twitter_grey.png"></a></li> 
+                                        <li><a title="Share this on linkedin " href="#"><img src="/static/assets/img/social_big/linkedin_grey.png"></a></li>                                        
+                                    </ul>
+                                </div>
+                            </div>
+                            <!-- End video area  -->
+                            
+                        </div>
+                    </div>
+
+
+                    <div class="col-md-4 p0">
+                        <aside class="sidebar sidebar-property blog-asside-right">
+                            <div class="dealer-widget">
+                                <div class="dealer-content">
+                                    <div class="inner-wrapper">
+
+                                        <div class="clear">
+                                            <div class="col-xs-4 col-sm-4 dealer-face">
+                                                <a href="">
+                                                    <img src="/static/assets/img/client-face1.png" class="img-circle">
+                                                </a>
+                                            </div>
+                                            <div class="col-xs-8 col-sm-8 ">
+                                                <h3 class="dealer-name">
+                                                    <a href="#">{{post.owner.username}}</a> <br>
+                                                    <span>{{post.city}}</span>        
+                                                </h3>
+                                                <div class="dealer-social-media">
+                                                    <a class="twitter" target="_blank" href="">
+                                                        <i class="fa fa-twitter"></i>
+                                                    </a>
+                                                    <a class="facebook" target="_blank" href="">
+                                                        <i class="fa fa-facebook"></i>
+                                                    </a>
+                                                    <a class="gplus" target="_blank" href="">
+                                                        <i class="fa fa-google-plus"></i>
+                                                    </a>
+                                                    <a class="linkedin" target="_blank" href="">
+                                                        <i class="fa fa-linkedin"></i>
+                                                    </a> 
+                                                    <a class="instagram" target="_blank" href="">
+                                                        <i class="fa fa-instagram"></i>
+                                                    </a>       
+                                                </div>
+
+                                            </div>
+                                        </div>
+
+                                        <div class="clear">
+                                            <ul class="dealer-contacts">                                       
+                                                <li><i class="pe-7s-map-marker strong"> </i>{{post.owner.county}}</li>
+                                                <li><i class="pe-7s-mail strong"> </i>{{post.owner.email}}</li>
+                                                <li><i class="pe-7s-call strong"> </i> {{post.owner.contact}}</li>
+                                            </ul>
+                                            <p></p>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+
+                           
+                            <div class="panel panel-default sidebar-menu wow fadeInRight animated">
+                                <div class="panel-heading">
+                                    <h3 class="panel-title">Pub</h3>
+                                </div>
+                                <div class="panel-body recent-property-widget">
+                                    <img src="/static/assets/img/ads.jpg">
+                                </div>
+                            </div>
+
+                            <div class="panel panel-default sidebar-menu wow fadeInRight animated" >
+                                <div class="panel-heading">
+                                    <h3 class="panel-title">Recherche</h3>
+                                </div>
+                                <div class="panel-body search-widget">
+                                        {% load searchbar %}
+                                        {% default_searchbar %}
+                                </div>
+                            </div>
+
+                        </aside>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        {% endblock %}
